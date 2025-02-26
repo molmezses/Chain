@@ -119,7 +119,7 @@ struct FirstCreateView: View {
                         .foregroundStyle(.gray)
                 }
                 .padding()
-                HStack{
+                HStack(spacing:6){
                     Text("Su")
                         .padding(12)
                         .onTapGesture {
@@ -241,7 +241,6 @@ struct FirstCreateView: View {
                         )
                         .clipShape(RoundedRectangle(cornerRadius: 12))
                         .focused($inFocus)
-                        .keyboardType(.numberPad)
                     Spacer()
                     TextField("", text: $chainUnit)
                         .foregroundStyle(.white)
@@ -616,22 +615,40 @@ struct FirstCreateView: View {
             }
             .padding(.leading , 22)
             Spacer()
-            Button {
-                withAnimation(.spring){
-                    page += 1
+            if page == 3{
+                NavigationLink {
+                    ChainListView()
+                        .navigationBarBackButtonHidden()
+                } label: {
+                    Text("Devam")
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 55)
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .fill(.indigo)
+                        )
                 }
-            } label: {
-                Text("Devam")
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 55)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(.indigo)
-                    )
+                .shadow(radius: 12)
+                .padding(.leading , 80)
+            }else{
+                Button {
+                    withAnimation(.spring){
+                        page += 1
+                    }
+                } label: {
+                    Text("Devam")
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 55)
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .fill(.indigo)
+                        )
+                }
+                .shadow(radius: 12)
+                .padding(.leading , 80)
             }
-            .shadow(radius: 12)
-            .padding(.leading , 80)
             
         }
     }
