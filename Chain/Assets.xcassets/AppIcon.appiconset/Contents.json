@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "Ekran Resmi 2025-02-26 10.55.06.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -13,7 +12,6 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Ekran Resmi 2025-02-26 10.55.06 1.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -25,7 +23,6 @@
           "value" : "tinted"
         }
       ],
-      "filename" : "Ekran Resmi 2025-02-26 10.55.06 2.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
