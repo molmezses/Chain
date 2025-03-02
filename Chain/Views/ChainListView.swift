@@ -24,28 +24,63 @@ struct ChainListView: View {
             Divider()
             ScrollView {
                 NavigationLink {
-                    
+                    ChainDetailsView(progress: 23, complete: 100, selectedColor: .customColor10)
+                        .navigationBarBackButtonHidden()
                 } label: {
-                    ChainView(selectedColor: .customColor10, completedChainProgress: 0.20 , title: "Her gün kitap okuyacağım" ,scor: "23/40" , isCompleted: false , isAcceptBell: true , isCorrectChain: false, emoji: "📚")
+                    ChainView(selectedColor: .customColor10, title: "Her gün kitap okuyacağım" ,scor: "23/40" , isCompleted: false , emoji: "📚")
+                        .foregroundStyle(Color("primaryColor"))
                 }
+                NavigationLink {
+                    ChainDetailsView(progress: 800, complete: 1300, selectedColor: .customColor2)
+                        .navigationBarBackButtonHidden()
 
-               
-                ChainView(selectedColor: .customColor2, completedChainProgress: 0.90 , title: "Diyet yapacağım" ,scor: "800/1300" , isCompleted: true , isAcceptBell: false , isCorrectChain: false, emoji: "💧")
-                ChainView(selectedColor: .customColor6, completedChainProgress: 1.0 , title: "Yeni kelime ezberleyeceğim" ,scor: "0/200" , isCompleted: true , isAcceptBell: true , isCorrectChain: true, emoji: "🚗")
-                ChainView(selectedColor: .customColor4, completedChainProgress: 0.50 , title: "Mekik çekeceğim" ,scor: "10/20" , isCompleted: false , isAcceptBell: true , isCorrectChain: false, emoji: "💪")
-                ChainView(selectedColor: .customColor9, completedChainProgress: 1.0 , title: "Meditasyon yapacağım" ,scor: "15/15" , isCompleted: true, isAcceptBell: true , isCorrectChain: true , emoji: "🧭")
-                ChainView(selectedColor: .customColor1, completedChainProgress: 1.0 , title: "Yabancı dil Çalışcağım" ,scor: "1/1" , isCompleted: true, isAcceptBell: true , isCorrectChain: false, emoji: "💧")
-                ChainView(selectedColor: .customColor8, completedChainProgress: 1.0 , title: "Yeni kelime ezberleyeceğim" ,scor: "0/200" , isCompleted: true , isAcceptBell: true , isCorrectChain: true, emoji: "🏀")
-                ChainView(selectedColor: .customColor3, completedChainProgress: 1.0 , title: "Yeni kelime ezberleyeceğim" ,scor: "0/200" , isCompleted: true , isAcceptBell: true , isCorrectChain: true, emoji: "🚗")
-                ChainView(selectedColor: .customColor4, completedChainProgress: 0.50 , title: "Mekik çekeceğim" ,scor: "10/20" , isCompleted: false , isAcceptBell: true , isCorrectChain: false, emoji: "💪")
-                ChainView(selectedColor: .customColor5, completedChainProgress: 1.0 , title: "Meditasyon yapacağım" ,scor: "15/15" , isCompleted: true, isAcceptBell: true , isCorrectChain: true , emoji: "🧭")
-                ChainView(selectedColor: .customColor1, completedChainProgress: 1.0 , title: "Yabancı dil Çalışcağım" ,scor: "1/1" , isCompleted: true, isAcceptBell: true , isCorrectChain: false, emoji: "💧")
-                ChainView(selectedColor: .customColor6, completedChainProgress: 1.0 , title: "Yeni kelime ezberleyeceğim" ,scor: "0/200" , isCompleted: true , isAcceptBell: true , isCorrectChain: true, emoji: "🏀")
+                } label: {
+                    ChainView(selectedColor: .customColor2, title: "Diyet yapacağım" ,scor: "800/1300" , isCompleted: true ,  emoji: "💧")
+                        .foregroundStyle(Color("primaryColor"))
+                }
+                NavigationLink {
+                    ChainDetailsView(progress: 40, complete: 130, selectedColor: .customColor6)
+                        .navigationBarBackButtonHidden()
+
+                } label: {
+                    ChainView(selectedColor: .customColor6, title: "Yeni kelime ezberleyeceğim" ,scor: "0/200" , isCompleted: true , emoji: "🚗")
+                        .foregroundStyle(Color("primaryColor"))
+                }
+                NavigationLink {
+                    ChainDetailsView(progress: 15, complete: 100, selectedColor: .customColor1)
+                        .navigationBarBackButtonHidden()
+
+                } label: {
+                    ChainView(selectedColor: .customColor1, title: "Yabancı dil Çalışcağım" ,scor: "1/1" , isCompleted: true, emoji: "💧")
+                        .foregroundStyle(Color("primaryColor"))
+                }
+                NavigationLink {
+                    ChainDetailsView(progress: 25, complete: 60, selectedColor: .customColor9)
+                        .navigationBarBackButtonHidden()
+                } label: {
+                    ChainView(selectedColor: .customColor9, title: "Meditasyon yapacağım" ,scor: "15/15" , isCompleted: true, emoji: "🧭")
+                        .foregroundStyle(Color("primaryColor"))
+                }
+                NavigationLink {
+                    ChainDetailsView(progress: 40, complete: 130, selectedColor: .customColor4)
+                        .navigationBarBackButtonHidden()
+
+                } label: {
+                    ChainView(selectedColor: .customColor4, title: "Mekik çekeceğim" ,scor: "10/20" , isCompleted: false, emoji: "💪")
+                        .foregroundStyle(Color("primaryColor"))
+                }
+                
+                ChainView(selectedColor: .customColor8, title: "Yeni kelime ezberleyeceğim" ,scor: "0/200" , isCompleted: true, emoji: "🏀")
+                ChainView(selectedColor: .customColor3, title: "Yeni kelime ezberleyeceğim" ,scor: "0/200" , isCompleted: true, emoji: "🚗")
+                ChainView(selectedColor: .customColor4, title: "Mekik çekeceğim" ,scor: "10/20" , isCompleted: false, emoji: "💪")
+                ChainView(selectedColor: .customColor5, title: "Meditasyon yapacağım" ,scor: "15/15" , isCompleted: true, emoji: "🧭")
+                ChainView(selectedColor: .customColor1, title: "Yabancı dil Çalışcağım" ,scor: "1/1" , isCompleted: true, emoji: "💧")
+                ChainView(selectedColor: .customColor6, title: "Yeni kelime ezberleyeceğim" ,scor: "0/200" , isCompleted: true , emoji: "🏀")
                
 
                 
             }
-            .navigationTitle("Chain")
+            .navigationTitle("My Chains")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

@@ -10,12 +10,9 @@ import SwiftUI
 struct ChainView: View {
     
     let selectedColor: Color
-    let completedChainProgress: CGFloat
     let title: String
     let scor: String
     let isCompleted: Bool
-    let isAcceptBell: Bool
-    let isCorrectChain: Bool
     @Environment(\.colorScheme) var colorScheme
     let emoji: String
 
@@ -64,10 +61,9 @@ struct ChainView: View {
             .padding(.vertical , 4)
         }
         .padding(.horizontal,8)
-        .padding(.vertical,4)
     }
 }
 
 #Preview {
-    ChainView(selectedColor: .customColor2, completedChainProgress: 0.2, title: "Hergün kitap okuyacağım", scor: "23/40", isCompleted: true, isAcceptBell: false, isCorrectChain: true, emoji: "📚")
+    ChainView(selectedColor: .customColor2, title: "Hergün kitap okuyacağım", scor: "23/40", isCompleted: true,  emoji: "📚")
 }
